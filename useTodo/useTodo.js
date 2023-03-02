@@ -1,5 +1,5 @@
 import { useEffect, useReducer } from "react"
-import { todoReducer } from "../08-useReducer/todoReducer"
+import { todoReducer } from "./todoReducer"
 
 const init = () => {
     //como toda funcion, por si sola no devuelve nada, debemos RETORNAR algo, entonces usamos RETURN para traer del local storage el string que pasamos antes, lo parseamos con JSON.parse() y le pasamos como argumento la KEY con la que guardamos en el useEffect. Pero si el local esta vacio, nos va a arroja null, y eso va a dar error, entonces con el operador logico '||' decimos "si el localStorage tiene algo, traelo y parsealo, si no tiene nada, trae un array vacio". Si no hacemos eso, la consola va a arroja error y va a decir que no se puede leer las propiedades de un NULL
